@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        body {
+            padding: 25px;
+            background-color: rgb(21, 167, 183);
+            color: black;
+            font-size: 25px;
+        }
+
+        .dark-mode {
+            background-color: black;
+            color: white;
+        }
+
+        .light-mode {
+            background-color: white;
+            color: black;
+        }
+
+        img {
+            display: flex;
+            height: 300px;
+            width: 300px;
+            /* border-radius: 2px solid red; */
+            margin: auto;
+            justify-content: center;
+            text-align: center;
+        }
+
+        h1 {
+            margin: auto;
+            justify-content: center;
+            text-align: center;
+        }
+
+        h3 {
+            justify-content: center;
+            align-items: center;
+            padding: 10px 445px;
+            width: 500px;
+        }
+
+
+        .btn {
+            /* border-radius: 8px; */
+            display: flex;
+            /* margin: auto; */
+            justify-content: center;
+            text-align: center;
+        }
+
+        button:hover {
+            background-color: pink;
+        }
+
+        p {
+            justify-content: center;
+            text-align: center;
+        }
+
+        @media (max-width:810px) {
+            h3 {
+                justify-content: center;
+                align-items: center;
+                padding: 5px 10px;
+                width: 500px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>GeeksForGeeks</h1>
+
+    <p>
+        This is a sample GeeksForGeeks Text.
+        Dark Mode Websites using Html CSS &
+        Javascript
+    </p>
+    <hr>
+    <img src="avocado-1838785_1920.jpg">
+    <hr>
+    <h3 id="DarkModetext">Different Display Modes</h3>
+    <div class="btn">
+        <button onclick="darkMode()"> Dark Mode</button>
+        <button onclick="lightMode()">LightMode</button>
+
+    </div>
+    <script>
+        function darkMode() {
+            var element = document.body;
+            var content = document.getElementById("DarkModetext");
+            element.className = "dark-mode";
+            content.innerText = "Dark Mode is ON";
+        }
+        function lightMode() {
+            var element = document.body;
+            var content = document.getElementById("DarkModetext");
+            element.className = "light-mode";
+            content.innerText = "Dark Mode is OFF";
+        }
+    </script>
+</body>
+
+</html>
